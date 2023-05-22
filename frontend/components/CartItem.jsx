@@ -1,4 +1,4 @@
-import { updateCart } from '@/store/cartSlice'
+import { updateCart, removeFromCart} from '@/store/cartSlice'
 import Image from 'next/image'
 import React from 'react'
 import {RiDeleteBin6Line} from "react-icons/ri"
@@ -82,7 +82,9 @@ const CartItem = ({data}) => {
                     </div>
 
                 </div>
-                <RiDeleteBin6Line className='cursor-pointer text-black/[0.5]
+                <RiDeleteBin6Line 
+                onClick={() => dispatch(removeFromCart({id: data.id}))}
+                className='cursor-pointer text-black/[0.5]
                 hover:text-black text-[16px] md:text-[20px]'/>
             </div>
         </div>

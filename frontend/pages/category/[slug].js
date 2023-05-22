@@ -45,7 +45,7 @@ const Category = ({ category, products, slug }) => {
           ))}
         </div>
 
-        {/* PAGINATION BUTTONS START */}
+        
         {data?.meta?.pagination?.total > maxResult && (
           <div className="flex gap-3 items-center justify-center my-16 md:my-0">
             <button
@@ -75,7 +75,7 @@ const Category = ({ category, products, slug }) => {
             </button>
           </div>
         )}
-        {/* PAGINATION BUTTONS END */}
+        
 
         {isLoading && (
           <div className="absolute top-0 left-0 w-full h-full bg-white/[0.5] flex flex-col gap-5 justify-center items-center">
